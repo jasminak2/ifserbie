@@ -47,7 +47,6 @@ get_header();
 					wp_reset_query();
 				?><!--end Info Post Loop-->
 
-
 				<!--Event Post Loop-->
 				<?php 
 					$lang = ICL_LANGUAGE_CODE; 

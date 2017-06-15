@@ -1,0 +1,13 @@
+<html>
+<head>
+<script language="javascript" src="ajax.js"></script>
+
+</head>
+<body>
+
+	<div id="ajax_calendrier">
+		<?php include "calendrier.php"; ?>
+	</div>
+
+</body>
+</html>

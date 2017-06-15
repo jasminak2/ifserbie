@@ -1,0 +1,50 @@
+.titre {
+	background: #0099cc url('images/bg-post-title.png') repeat left top;
+	padding: 8px 8px;
+	font-family: 'dinMed',sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+.titre-gris {
+	background: #0099cc url('images/bg-top-post.png') repeat left top;
+	padding: 10px;
+	font-family: 'dinMed',sans-serif;
+    font-size: 18px;
+    color: #231F20;
+    text-transform: uppercase;
+    border: 1px solid #e4e5e5;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.sous-titre {
+	font-weight: bold;
+	color: #3E647E;
+}
+.float-left {
+    float:left;
+    margin-right: 20px;
+}
+.sep1, .sep2 {
+    width: 100%;
+    height: 5px;
+    margin: 15px 0;
+}
+.sep1 {
+    background: url("images/bg-divider-blue.png") repeat;
+}
+.sep2 {
+    background: url("images/bg-sidebar-h2.png") repeat;
+}
+
+blockquote {
+    margin: 0;
+}
+blockquote p {
+    border-left: 10px solid #008ac9;
+    padding-left: 15px;
+} 
+
+.lien::before {
+    content: url("images/fleche-m.png");
+}

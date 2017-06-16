@@ -20,7 +20,7 @@
 			</div>
 			
 			<div class="header-widget">
-				<!--<?php //languages_list_header(); /* outputs the language switcher */ ?>-->
+				<?php languages_list_header(); /* outputs the language switcher */ ?>
 				<?php get_search_form() ?>
 
 			</div>

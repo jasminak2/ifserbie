@@ -46,6 +46,7 @@ get_header();
 					'order' => 'DSC',
 					'posts_per_page' => 20, 
 					'paged' => $paged,
+					'post__not_in' => array(1, 1421), //Post NOT to retrieve (post: no-content).
 					'meta_query' => array(
     			  		array(
     			  		   'key' => 'if_events_enddate',

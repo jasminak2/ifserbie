@@ -46,7 +46,7 @@ get_header();
 						'orderby' => 'meta_value_num',
 						'meta_key' => 'if_events_startdate',
 						'order' => 'ASC',
-						'post__not_in' => array(1), //Post NOT to retrieve (post: no-content).
+						'post__not_in' => array(1, 1407), //Post NOT to retrieve (post: no-content).
 						'meta_query' => array(
     				  		array(
     				  		   'key' => 'if_events_enddate',
@@ -74,7 +74,7 @@ get_header();
 						'orderby' => 'meta_value_num',
 						'meta_key' => 'if_events_startdate',
 						'order' => 'ASC',
-						'post__not_in' => array(1), //Post NOT to retrieve (post: no-content).
+						'post__not_in' => array(1, 1407), //Post NOT to retrieve (post: no-content).
 						'meta_query' => array(
     				  		array(
     				  		   'key' => 'if_events_enddate',
@@ -109,7 +109,7 @@ get_header();
 						'orderby' => 'meta_value_num',
 						'meta_key' => 'if_events_startdate',
 						'order' => 'ASC',
-						'post__not_in' => array(1), //Post NOT to retrieve (post: no-content).
+						'post__not_in' => array(1, 1407), //Post NOT to retrieve (post: no-content).
 						'meta_query' => array(
     				  		array(
     				  		   'key' => 'if_events_enddate',

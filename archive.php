@@ -47,14 +47,6 @@ get_header();
 						'meta_key' => 'if_events_startdate',
 						'order' => 'DESC',
 						'post__not_in' => array(1, 1407), //Post NOT to retrieve (post: no-content).
-						'meta_query' => array(
-    				  		array(
-    				  		   'key' => 'if_events_enddate',
-    				  		   'value' => strtotime('yesterday'),
-    				  		   'compare' => '>',
-    				  		   'type' => 'numeric'
-    				  		   )
-    				    )
     				);			
 					// Query - FUTURE by tag
 					$query_tag = new WP_Query( $args_tag );	

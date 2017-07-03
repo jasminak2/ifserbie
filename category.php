@@ -90,8 +90,8 @@ get_header();
 					?>
 					<!--end Event Post Loop-->
 
-					<?php // Archive Link if empty (if no posts and no category description)		
-						if (! $query_future->have_posts() && ! category_description() ) : ?>
+					<?php // Archive Link if empty (if no posts and no info post)		
+						if (! $query_future->have_posts() && ! $query_info->have_posts() ) : ?>
 						<div class="archive-link">
 							<a href="<?php echo $url; ?>/<?php echo $lang; ?>/archive/?cat=<?php echo $current_cat; ?>"> 
 							<?php _e( '← Archives:' , 'ifserbie' );  ?> <?php echo 	get_cat_name($current_cat) ?>

@@ -39,8 +39,9 @@ get_header();
     				// get tag slug
 					$tag = get_queried_object();
     				$post_tag = $tag->slug;	
-					// args TAGS
-					$args_tag = array(
+					
+					// args POST tags
+					$args_post_tag = array(
 						'post_type' => 'post',
 						'tag' => $post_tag, 
 						'orderby' => 'meta_value_num',
@@ -48,11 +49,27 @@ get_header();
 						'order' => 'DESC',
 						'post__not_in' => array(1, 1407), //Post NOT to retrieve (post: no-content).
     				);			
-					// Query - FUTURE by tag
-					$query_tag = new WP_Query( $args_tag );	
-					if ( $query_tag->have_posts() ):
-						while ( $query_tag->have_posts() ) : $query_tag->the_post();
+					// Query POST by tag
+					$query_post_tag = new WP_Query( $args_post_tag );	
+					if ( $query_post_tag->have_posts() ):
+						while ( $query_post_tag->have_posts() ) : $query_post_tag->the_post();
 							get_template_part('content','event');
+						endwhile;
+					endif; 
+					wp_reset_query(); // Restore global post data stomped by the_post(). 
+					?>	<!--end Event Post Loop-->
+					
+					<?php 
+					// args INFO tags
+					$args_info_tag = array(
+						'post_type' => 'info',
+						'tag' => $post_tag, 
+    				);			
+					// Query INFO by tag
+					$query_info_tag = new WP_Query( $args_info_tag );	
+					if ( $query_info_tag->have_posts() ):
+						while ( $query_info_tag->have_posts() ) : $query_info_tag->the_post();
+							get_template_part('content', get_post_format());
 						endwhile;
 					endif; 
 					wp_reset_query(); // Restore global post data stomped by the_post(). 

@@ -172,6 +172,7 @@ th {
 	background: url('images/bg-top-post.png') repeat left top;
 	color: #231F20;
 	text-transform: uppercase;
+	margin: 7px 0;
 }
 .titre-gris a {
 	color: #231F20;
@@ -476,6 +477,9 @@ MAIN CONTENT
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+}
+.article-container.aside {
+	padding-bottom: 10px;
 }
 
 /* === Hide post "no-content" koji je vezan za sve kategorije da bi prikazivalo Submenu na stranici Post.

@@ -33,6 +33,20 @@ get_header();
 
 				<section>
 				<!--Event Post Loop-->
+				<?php 	
+					$args_info = array(
+					  'category__in' => array($current_cat), // Don’t show posts from child category in parents 
+					  'post_type' => 'info',
+					);
+					$query_info = new WP_Query($args_info);
+					if ($query_info->have_posts()) :
+						while ($query_info->have_posts()) : $query_info->the_post(); 
+							get_template_part('content', get_post_format());  
+						endwhile;			
+					endif;
+					wp_reset_query();
+				?><!--end Info Post Loop-->
+				
 				<?php 
     				$cat_slug = $current_cat->slug;	
     				$category_midi = get_cat_ID( 'midi' );	

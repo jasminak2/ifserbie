@@ -456,3 +456,10 @@ function myprefix_add_format_styles( $init_array ) {
 } 
 add_filter( 'tiny_mce_before_init', 'myprefix_add_format_styles' );
 
+/*
+	==========================================
+	 Remouve default styles for gallery
+	==========================================
+*/
+
+add_filter( 'use_default_gallery_style', '__return_false' );

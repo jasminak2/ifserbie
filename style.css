@@ -658,6 +658,8 @@ a.savoir:hover {
 	color: #008ac9;
 }
 
+.sidebar .textwidget > p {margin: 0;}
+
 /* Newsletter */
 .newsletter.widget-item {
 	padding: 10px;

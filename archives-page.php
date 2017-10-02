@@ -70,9 +70,9 @@ get_header();
 					)); ?>
 					</div>
 
-				<?php else :
-					_e( 'No content found' , 'ifserbie' ); 
-													
+				<?php else : ?>
+					<h2><?php _e( 'No content found' , 'ifserbie' ); ?></h2> 
+				<?php						
 				endif; 
 				wp_reset_query();	 // Restore global post data stomped by the_post(). 
 				?>

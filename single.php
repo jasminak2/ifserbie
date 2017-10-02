@@ -49,8 +49,9 @@ get_header();
 					
 				<?php 
 					endwhile;				
-					else :
-						_e( 'No content found' , 'ifserbie' ); 				
+					else : ?>
+						<h2><?php _e( 'No content found' , 'ifserbie' ); ?></h2> 
+					<?php			
 				endif;
 				?>		
 				</section>

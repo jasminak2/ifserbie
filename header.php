@@ -4,6 +4,13 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title><?php bloginfo('name'); ?></title>
+	<meta name="keywords" content="institut français, Francuski institut, Belgrade, Serbie, Beograd, Srbija, centre culturel français, francuski kulturni centar, culture, kultura, coopération culturelle, évènements, dogadjaju, desavanja, evenements, francais, langue, francuski jezik, IF, IFS, ucenje francuskog, langue française, cours de langue, casovi francuskog, časovi, stipendije">
+	<meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    }
+    ?>" />
 	<?php wp_head(); ?>
 	
 

@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
   $(".ifdate").datepicker({
     dateFormat: 'D, M d, yy',
     showOn: 'button',
-    buttonImage: 'http://www.institutfrancais.rs/assets/icon-datepicker.png',
+    buttonImage: 'http://www.institutfrancais.rs/doc/icon-datepicker.png',
     buttonImageOnly: true,
     numberOfMonths: 3
 

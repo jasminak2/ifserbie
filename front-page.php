@@ -20,7 +20,14 @@ get_header();
 				<!-- Teasers loop -->
 				<div class="teaser-container" id="post-<?php the_ID()?>">
 				<?php 
+				$lang = ICL_LANGUAGE_CODE; 
+					if($lang=='fr'){
 					$query_teasers = new WP_Query('category_name=teasers&post_type=info');
+					}
+					if($lang=='sr'){
+					$query_teasers = new WP_Query('category_name=teasers-sr&post_type=info');
+					}
+					
 					if ($query_teasers->have_posts()) :
 						while ($query_teasers->have_posts()) : $query_teasers->the_post();?>
 						<div class="teaser">		
@@ -40,11 +47,19 @@ get_header();
 				<br>				 
 				<!-- Home post loop -->
 				<?php 
-				$args_home = array(
-					'category_name' => 'accueil', 
-					'post_type' => 'any',
-            		
-				);
+					if($lang=='fr'){
+					$args_home = array(
+						'category_name' => 'accueil', 
+						'post_type' => 'any',
+					 	);
+					 }
+					if($lang=='sr'){
+						$args_home = array(
+						'category_name' => 'pocetna', 
+						'post_type' => 'any',
+					 	); 
+					 }
+									
 				$homePosts = new WP_Query($args_home);
 				if ($homePosts -> have_posts()) :
 					while ($homePosts ->have_posts()) : $homePosts -> the_post(); 

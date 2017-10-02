@@ -19,8 +19,9 @@ get_header();
 					while (have_posts()) : the_post(); ?>
 					<?php the_content();				
 					endwhile;				
-					else :
-						_e( 'No content found' , 'ifserbie' ); 				
+					else : ?>
+						<h2><?php _e( 'No content found' , 'ifserbie' ); ?></h2> 
+					<?php			
 					endif;
 				?>
 				 
